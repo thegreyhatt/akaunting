@@ -12,7 +12,9 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "serve": "vue-cli-service serve --open",
         "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint"
+        "lint": "vue-cli-service lint",
+        "heroku-prebuild": "npm i -f",
+        "heroku-postbuild": "npm run prod"
     },
     "dependencies": {
         "@babel/plugin-syntax-dynamic-import": "^7.2.0",
@@ -57,8 +59,8 @@
         "cross-env": "^5.2.1",
         "jquery": "^3.4.1",
         "laravel-mix": "^4.1.4",
-        "lodash": "^4.17.15",
-        "node-sass": "^4.12.0",
+        "lodash": "^4.17.19",
+        "node-sass": "^4.14.1",
         "popper.js": "^1.12",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.22.12",
